@@ -1,0 +1,675 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Poppins', sans-serif; 
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #fff;
+    color: #000;
+}
+
+#header{
+    width: 100%;
+    height: 100vh; 
+    background-image: url(images/Manta\ vor\ Sonne.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;   
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    padding: 10px 5%;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 60px;
+}
+
+.header-text h1{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #000;
+}
+
+/* -----------Einheitliche Grundeinstellungen für alle Abschnitte----------- */
+#aktuelles,
+#angebot,
+#ausbildung,
+#gallery {
+    padding: 80px 0;
+    background-color: #f5f7fa;
+    position: relative;
+    z-index: 2;
+}
+
+/* Erste Section nach Header bekommt margin-top */
+#aktuelles {
+    margin-top: 100vh;
+}
+
+/* Einheitliche Container-Einstellungen */
+#aktuelles .container,
+#angebot .container,
+#ausbildung .container,
+#gallery .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Einheitliche Überschriften */
+#aktuelles .sub-title,
+#angebot .sub-title,
+#ausbildung .sub-title,
+#gallery .sub-title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 60px;
+    color: #0066a4;
+    position: relative;
+}
+
+/* Einheitliche Unterstreichung für alle Überschriften */
+#aktuelles .sub-title::after,
+#angebot .sub-title::after,
+#ausbildung .sub-title::after,
+#gallery .sub-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #00a8e1;
+    border-radius: 2px;
+}
+
+/* -----------Aktuelles / Timeline----------- */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 4px;
+    height: 100%;
+    background: #0066a4;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.timeline-date {
+    width: 120px;
+    text-align: left;
+    padding-right: 30px;
+    font-weight: bold;
+    color: #0066a4;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -14px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 3px solid #0066a4;
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* -----------Angebot (ANGEPASST)----------- */
+#angebot .work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+#angebot .work {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+#angebot .work img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+#angebot .layer {
+    padding: 25px;
+    background: #fff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#angebot .layer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0066a4;
+}
+
+#angebot .layer p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+/* -----------Ausbildung (ANGEPASST SLIDER)----------- */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+}
+
+.services-list {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.services {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.services img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.services .layer {
+    padding: 25px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.services .layer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0066a4;
+}
+
+.services .layer p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: #0066a4;
+}
+
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0066a4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* -----------Galerie----------- */
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    scroll-behavior: smooth;
+}
+
+.gallery-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 0 0 180px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .layer {
+    opacity: 1;
+}
+
+.gallery-item .layer h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0066a4;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    background: #333;
+    color: white;
+    padding: 80px 10% 40px 10%;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-box {
+    flex: 1;
+}
+
+.footer-box h4 {
+    margin-bottom: 20px;
+    color: #0066a4;
+}
+
+/* -----------css for small screens----------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 992px){
+    #header{
+        background-image: url(images/Manta\ vor\ Sonne.jpg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .header-text{
+        margin-top: 100%;
+        font-size: 30px;
+    }
+    .header-text h1{
+        font-size: 16px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#fff;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 20;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    
+    /* -----------Mobile Responsive für alle Abschnitte (ANGEPASST)----------- */
+    #aktuelles,
+    #angebot,
+    #ausbildung,
+    #gallery {
+        padding: 50px 0;
+    }
+    
+    #aktuelles .sub-title,
+    #angebot .sub-title,
+    #ausbildung .sub-title,
+    #gallery .sub-title {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin-left: 40px;
+    }
+
+    .timeline-date {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+    }
+    
+    #angebot .work-list {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    #angebot .work {
+        height: auto;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    #angebot .layer {
+        height: auto;
+    }
+    
+    #angebot .layer p {
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .slider-container {
+        min-height: 450px;
+    }
+    
+    .services img {
+        height: 180px;
+    }
+    
+    .services .layer p {
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 150px;
+    }
+    
+    .gallery-item img {
+        height: 120px;
+    }
+    
+    .lightbox-content {
+        max-width: 95%;
+    }
+    
+    .close {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+    
+    .footer-container {
+        padding: 50px 10% 40px 10%;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
