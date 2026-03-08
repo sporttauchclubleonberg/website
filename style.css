@@ -294,7 +294,7 @@ nav ul li a:hover::after{
 
 .services img {
     width: 100%;
-    height: 320px;
+    height: 500px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center;
@@ -639,6 +639,9 @@ nav .fas{
     .services img {
         height: 240px;
     }
+
+    .services .layer h3 {
+        text-align: center;
     
     .services .layer p {
         text-align: left;
