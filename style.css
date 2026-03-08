@@ -77,19 +77,30 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
-.header-text{
-    margin-top: 20%;
-    font-size: 60px;
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 8vw, 72px);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 40px rgba(30, 144, 212, 0.5);
 }
 
-.header-text h1{
-    font-size: 30px;
-    margin-top: 20px;
-}
+.header-text h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #5bbfed;
+    margin-top: 12px;
 
-.header-text h1 span{
-    color: #000;
-}
 
 /* -----------Einheitliche Grundeinstellungen für alle Abschnitte----------- */
 #aktuelles,
@@ -518,13 +529,16 @@ nav .fas{
         z-index: 1;
     }
     
-    .header-text{
-        margin-top: 100%;
-        font-size: 30px;
+    .header-text {
+        font-size: clamp(32px, 8vw, 52px);
+        width: 90%;
     }
-    .header-text h1{
-        font-size: 16px;
+
+    .header-text h1 {
+        font-size: clamp(10px, 3vw, 14px);
+        letter-spacing: 0.2em;
     }
+
     nav .fas{
         display: block;
         font-size: 25px;
