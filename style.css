@@ -635,6 +635,10 @@ nav .fas{
     .slider-container {
         min-height: 450px;
     }
+
+    .slider-arrows {
+        top: 270px;
+    }
     
     .services img {
         height: 240px;
